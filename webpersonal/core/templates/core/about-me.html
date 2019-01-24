@@ -1,0 +1,38 @@
+
+
+{% extends 'core/base.html' %}
+
+{% block title %} About Me {% endblock %}
+
+<!-- Tiene q ir todo en la misma linea para que el nav no haga salto de linea, y cargue la img -->
+{% block background %}{% load static %}{% static 'core/img/acerca.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Acerca de</h1>
+    <span class="subheading">Biografía</span>
+{% endblock%}
+
+ 
+{% block content %} 
+    <div class="Row">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/yo1.jpg'%}" alt="">
+        </div>
+
+        <div class="col-lg-7 col-md-8">
+         <h2 class="section-heading">Gabriel Mc Gann</h2>   
+         <p>Pergamino, Buenos Aires. Argentina.  </p>
+         <p>Java fullstack / Spring Framework</p>
+         <p>Python / Django</p>
+         <p>Game Engines: Unity / Unreal 4</p>
+         <p>Html5 - Css3 - Javascript</p>
+         <p>Blender 3d artist</p>
+         <br>
+         <p>Nivel de inglés: Intermedio+</p>
+        </div>   
+    </div>
+{% endblock %}
+
+
+<h2 class="section-heading">Gabriel Mc Gann</h2> 
+        

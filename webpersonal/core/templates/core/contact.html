@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Contacto {% endblock %}
+
+<!-- Tiene q ir todo en la misma linea para que el nav no haga salto de linea, y cargue la img -->
+{% block background %}{% load static %}{% static 'core/img/contacto.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Contacto</h1>
+    <span class="subheading">Asesoría</span>
+{% endblock%}
+
+
+{% block content %} 
+<div class="Row">
+<div class="col-lg-8 col-md-10 mx-auto">
+          <p>Puedes contactarme de Lunes a Viernes, de 8:00 a 21:00 y Sábados de 9:00 a 15:00</p>
+          <br>
+          <p><b>Teléfono:</b> +54 2477 15354411</p>
+          <!--<p><b>Honorarios:</b> u$10/h (precio base)</p>-->
+          <p><b>Email:</b> dev.mcgann@gmail.com</p>
+        </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Portfolio {% endblock %}
+
+<!-- Tiene q ir todo en la misma linea para que el nav no haga salto de linea, y cargue la img -->
+{% block background %}{% load static %}{% static 'core/img/portfolio.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>EN CONSTRUCCION!!</h1>
+	<br>
+    <h1>Mi Portfolio</h1>
+    <span class="subheading">Algunos de mis proyectos</span>
+{% endblock%}
+
+
+{% block content %} 
+
+{% for project in projects %}
+	      <!-- Proyecto -->
+	      <div class="row project">  	
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+			      <img class="img-fluid" src="{{project.image.url}}" alt="">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">{{project.title}} </h2>   
+	          <p>{{project.description}}</p>
+			  {% if project.link %}
+	          	<p><a href="{{project.link}}">Enlace</a></p>
+			  {% endif %}
+	      	</div>
+	      </div>
+{% endfor %}
+          
+{% endblock %}
+
+
+
+    
